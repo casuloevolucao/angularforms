@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 class="text-center">Reactive Forms - O Ismael esteve aqui rsrsrsrs</h1>
+  <div class="row justify-content-center">
+      <button class="btn btn-primary m-1" (click)="toggleEditor('simple')">Formulario por Group</button>
+      <button class="btn btn-secondary m-1" (click)="toggleEditor('array')">Formuraio por Array</button>
+      <button class="btn btn-dark m-1" (click)="toggleEditor('tabs')">Formuraio por Tabs</button>
+  </div>
+  <app-simple *ngIf="showSimple"></app-simple>
+  <app-array *ngIf="showArray"></app-array>
+  <app-tabs *ngIf="showTabs"></app-tabs>
+</div>

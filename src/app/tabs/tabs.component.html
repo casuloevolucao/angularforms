@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col">
+    <tabset type="pills">  
+        <tab heading="identification">
+          <app-identification [form]="form"></app-identification>
+        </tab>
+        <tab heading="Address">
+          <app-address [form]="form"></app-address>
+        </tab>
+        <tab heading="aliases">
+          <app-aliases [form]="form"></app-aliases>
+        </tab>
+    </tabset>
+  </div>
+  <div class="col">
+    <p>
+      Form Value: {{ form.value | json }}
+    </p>
+    <p>
+      Form Status: {{ form.status }}
+    </p>
+
+    <p>
+      <button class="btn btn-dark" (click)="updateProfile()">Update Profile</button>
+    </p>
+  </div>
+</div>

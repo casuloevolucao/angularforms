@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div formArrayName="aliases">
+      <h3>Aliases</h3> <button class="btn btn-success" (click)="addAlias()">Add Alias</button>
+      <div *ngFor="let address of aliases.controls; let i=index">
+        <!-- The repeated alias template -->
+      <div class="form-group">
+          <label>Alias:</label>
+          <input class="form-control" type="text" [formControlName]="i">  
+      </div>
+      <div class="form-group">
+          <button class="btn btn-danger" (click)="deleteAlias(i)">delete</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+</form>

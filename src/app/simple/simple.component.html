@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col">
+    <label>Name:</label> 
+    <input class="form-control" type="text" [formControl]="name">   
+    <p>
+      <button class="btn btn-primary mt-3" (click)="updateName()">Update Name</button>
+    </p>
+  </div>
+  <div class="col">
+    <p>
+      Value: {{ name.value }}
+    </p>
+  </div>
+</div>
